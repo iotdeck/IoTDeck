@@ -14,6 +14,19 @@
 // at the default limit is slower than the seconds you choose.
 
 #pragma once
+
+// Checks that the board and the libraries are installed. Arduino IDE does not install them when you
+// add this library from a ZIP file, so these messages say what to install.
+#if !defined(ESP32)
+#error "IoTDeck works on ESP32 boards only. Choose an ESP32 board (Tools > Board) after installing the 'esp32' board package by Espressif."
+#endif
+#if !__has_include(<WebSocketsClient.h>)
+#error "IoTDeck needs the WebSockets library by Markus Sattler. Install it: Sketch > Include Library > Manage Libraries, search 'WebSockets', then Install."
+#endif
+#if !__has_include(<ArduinoJson.h>)
+#error "IoTDeck needs the ArduinoJson library version 7 by Benoit Blanchon. Install it: Sketch > Include Library > Manage Libraries, search 'ArduinoJson', then Install."
+#endif
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
