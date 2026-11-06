@@ -5,12 +5,9 @@ ESP32 library for the IoTDeck dashboard.
 ## Install
 
 1. In Arduino IDE, install the **esp32** board package by Espressif (Tools > Board > Boards Manager).
-2. Install these two libraries (Sketch > Include Library > Manage Libraries):
-   - **ArduinoJson** by Benoit Blanchon, version 7 or newer
-   - **WebSockets** by Markus Sattler
-3. Install IoTDeck: Sketch > Include Library > Add .ZIP Library, or install it from the Library Manager.
+2. Install IoTDeck: Sketch > Include Library > Add .ZIP Library, or install it from the Library Manager.
 
-If one of these is missing, the compiler stops with a message that names the library to install.
+ArduinoJson and WebSockets are included in the library, so nothing else needs installing. Their licenses are in `third_party/`.
 
 ## Made with Bala Code
 
